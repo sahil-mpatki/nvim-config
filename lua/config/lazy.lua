@@ -64,6 +64,16 @@ map("n", "<leader>4", function()
 require("harpoon"):list():select(4)
 end, { desc = "Harpoon: Go to file 4" })
 
+-- Tab functionality in nvim
+-- Map Ctrl+Right to next tab
+vim.keymap.set("n", "<C-Right>", ":tabnext<CR>", { noremap = true, silent = true })
+-- Map Ctrl+Left to previous tab
+vim.keymap.set("n", "<C-Left>", ":tabprevious<CR>", { noremap = true, silent = true })
+-- Map Ctrl+t to open a new tab
+vim.keymap.set("n", "<C-t>", ":tabnew<CR>", { noremap = true, silent = true })
+-- Map Ctrl+w to close current tab
+vim.keymap.set("n", "<C-w>", ":tabclose<CR>", { noremap = true, silent = true })
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
