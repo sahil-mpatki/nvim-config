@@ -39,6 +39,30 @@ vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle File Ex
 -- quit all
 vim.keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit all" })
 
+-- Harpoon keymaps
+local map = vim.keymap.set
+
+-- Map <leader>e to open Harpoon menu (using Telescope if available)
+map("n", "<leader>h", function()
+require("telescope").extensions.harpoon.marks()
+end, { desc = "Open Harpoon Menu" })
+
+-- Optional: Additional Harpoon keymaps for marking and navigating files
+map("n", "<leader>ha", function()
+require("harpoon"):list():append()
+end, { desc = "Harpoon: Add file" })
+map("n", "<leader>1", function()
+require("harpoon"):list():select(1)
+end, { desc = "Harpoon: Go to file 1" })
+map("n", "<leader>2", function()
+require("harpoon"):list():select(2)
+end, { desc = "Harpoon: Go to file 2" })
+map("n", "<leader>3", function()
+require("harpoon"):list():select(3)
+end, { desc = "Harpoon: Go to file 3" })
+map("n", "<leader>4", function()
+require("harpoon"):list():select(4)
+end, { desc = "Harpoon: Go to file 4" })
 
 -- Setup lazy.nvim
 require("lazy").setup({
