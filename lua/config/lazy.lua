@@ -40,7 +40,6 @@ vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle File Ex
 vim.keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit all" })
 
 
-
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
