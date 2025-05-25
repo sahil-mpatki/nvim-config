@@ -32,6 +32,14 @@ vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.colorcolumn = "80"
 
+-- custom keymaps
+-- Neotree toggle
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle File Explorer" })
+
+-- quit all
+vim.keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit all" })
+
+
 
 -- Setup lazy.nvim
 require("lazy").setup({
